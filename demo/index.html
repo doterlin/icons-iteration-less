@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>icons-iteration-less demo</title>
+  <!--这里要引入你编译后的css-->
+  <link rel="stylesheet" type="text/css" href="/icon.css"/>
+</head>
+<body>
+<div id="app">
+    <!--使用vue.js的组件方式调用-->
+   <Icon type="&#xe602" size="18" ver="1" color="#333"></Icon>
+   <Icon type="&#xe604" size="18" ver="2" color="#333"></Icon>
+
+   <!--直接只用class调用-->
+   <i class="'icon icon-1'" style="font-size: 18px; color:#333">&#xe602</i>
+   <i class="'icon icon-2'" style="font-size: 18px; color:#333">&#xe604</i>
+</div>
+
+<!--这里演示，真正使用请引入vue.js-->
+<script type="text/javascript" src="/js/vue.min.js"></script>
+<script>
+    import Icon from 'icon.vue';
+    var app = new Vue({
+        el: '#app',
+        components: [Icon]
+    })
+</script>
+</body>
+</html>
